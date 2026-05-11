@@ -1,116 +1,433 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Taverna do Rogério em Carcavelos: Gastronomia mediterrânea e portuguesa, música ao vivo, opções sem glúten. Ideal para almoços, jantares e reservas.">
-  <title>Taverna do Rogério | Restaurante em Carcavelos</title>
-  <style>
-    :root {
-      --cor-primaria:  #2c3e50;
-      --cor-destaque:  #d35400;
-      --cor-fundo:  #f8f9fa;
-      --cor-texto:  #333;
-      --cor-branca:  #fff;
-      --sombra: 0 4px 12px  rgba(0,0,0,0.1);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: var(--cor-texto); background: var(--cor-fundo); }
-    
-    /* Navegação */
-    nav { background: var(--cor-primaria); padding: 15px; position: sticky; top: 0; z-index: 100; }
-    nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-    nav a { color: var(--cor-branca); text-decoration: none; font-weight: 500; padding: 5px 10px; border-radius: 4px; transition: 0.3s; }
-    nav a:hover { background:  rgba(255,255,255,0.15); }
-    /* Cabeçalho */
-    header { text-align: center; padding: 60px 20px; background: linear-gradient( rgba(0,0,0,0.5),  rgba(0,0,0,0.5)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/61/8f/fa/photo0jpg.jpg?w=1100&h=600&s=1') center/cover; color: white; }
-    header h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 2px 2px 4px  rgba(0,0,0,0.5); }
-    header p { font-size: 1.2rem; opacity: 0.9; }
-    /* Seções */
-    section { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-    h2 { color: var(--cor-primaria); border-bottom: 3px solid var(--cor-destaque); display: inline-block; margin-bottom: 20px; padding-bottom: 5px; }
-    
-    .grid-destaques { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
-    .card { background: var(--cor-branca); padding: 20px; border-radius: 8px; box-shadow: var(--sombra); text-align: center; }
-    .card h3 { color: var(--cor-destaque); margin-bottom: 8px; }
-    .info-box { display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; margin-top: 20px; }
-    .info-box div { flex: 1; min-width: 250px; background: var(--cor-branca); padding: 20px; border-radius: 8px; box-shadow: var(--sombra); }
-    /* Botão WhatsApp */
-    .btn-whatsapp { display: inline-block; background:  #25D366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: transform 0.2s; }
-    .btn-whatsapp:hover { transform: scale(1.05); }
-    /* Mapa */
-    .mapa-container { width: 100%; height: 300px; border: 0; border-radius: 8px; box-shadow: var(--sombra); margin-top: 20px; }
-    /* Rodapé */
-    footer { text-align: center; padding: 20px; background: var(--cor-primaria); color: white; margin-top: 50px; }
-    /* Responsivo */
-    @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      nav ul { gap: 10px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Taverna do Rogério | Restaurante em Carcavelos</title>
+
+<meta name="description" content="Taverna do Rogério em Carcavelos. Gastronomia portuguesa e mediterrânea, peixe fresco, petiscos, música ao vivo e reservas online.">
+
+<style>
+
+:root{
+  --primaria:#2c3e50;
+  --destaque:#d35400;
+  --fundo:#f4f4f4;
+  --branco:#fff;
+  --texto:#333;
+  --sombra:0 4px 12px rgba(0,0,0,0.1);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Segoe UI,sans-serif;
+  background:var(--fundo);
+  color:var(--texto);
+  line-height:1.6;
+}
+
+/* NAV */
+
+nav{
+  background:var(--primaria);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  padding:15px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:rgba(255,255,255,0.2);
+}
+
+/* HEADER */
+
+header{
+  height:90vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/61/8f/fa/photo0jpg.jpg?w=1100&h=600&s=1");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+  color:white;
+  padding:20px;
+}
+
+header h1{
+  font-size:4rem;
+  margin-bottom:15px;
+}
+
+header p{
+  font-size:1.3rem;
+  margin-bottom:20px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--destaque);
+  color:white;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:50px;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+
+section{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 20px;
+}
+
+h2{
+  color:var(--primaria);
+  margin-bottom:25px;
+  border-bottom:3px solid var(--destaque);
+  display:inline-block;
+  padding-bottom:6px;
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:var(--sombra);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  color:var(--destaque);
+  margin-bottom:10px;
+}
+
+/* GALERIA */
+
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.galeria img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.galeria img:hover{
+  transform:scale(1.03);
+}
+
+/* INFO */
+
+.info{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+}
+
+.info-box{
+  flex:1;
+  min-width:280px;
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:var(--sombra);
+}
+
+/* STATUS */
+
+.status{
+  margin-top:10px;
+  font-weight:bold;
+  color:green;
+}
+
+/* MAPA */
+
+iframe{
+  width:100%;
+  height:300px;
+  border:none;
+  border-radius:12px;
+  margin-top:15px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  display:inline-block;
+  background:#25D366;
+  color:white;
+  padding:14px 25px;
+  border-radius:50px;
+  text-decoration:none;
+  margin-top:20px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.whatsapp:hover{
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+  background:var(--primaria);
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:50px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  header h1{
+    font-size:2.5rem;
+  }
+
+  header p{
+    font-size:1rem;
+  }
+
+}
+
+</style>
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#menu">Destaques</a></li>
-      <li><a href="#info">Horários & Local</a></li>
-      <li><a href="#contato">Reservas</a></li>
-    </ul>
-  </nav>
-  <header id="inicio">
-    <h1>Taverna do Rogério</h1>
-    <p>Gastronomia Mediterrânea & Portuguesa em Carcavelos</p>
-  </header>
-  <section id="menu">
-    <h2>️ O Que Servimos</h2>
-    <p>Pratos preparados com ingredientes frescos, inspirados na tradição portuguesa e no Mediterrâneo.</p>
-    <div class="grid-destaques">
-      <div class="card">
-        <h3>🐟 Peixe Fresco</h3>
-        <p>Catch do dia grelhado ou à lagareira, servido com legumes da época.</p>
-      </div>
-      <div class="card">
-        <h3>🥩 Carnes & Petiscos</h3>
-        <p>Secretos, entrecosto e tábuas de queijos e enchidos artesanais.</p>
-      </div>
-      <div class="card">
-        <h3> Sem Glúten</h3>
-        <p>Opções seguras e saborosas para celíacos e intolerantes.</p>
-      </div>
-      <div class="card">
-        <h3>🍷 Vinhos & Cocktails</h3>
-        <p>Carta selecionada de vinhos portugueses e cocktails artesanais.</p>
-      </div>
+
+<nav>
+  <ul>
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#info">Localização</a></li>
+    <li><a href="#contacto">Reservas</a></li>
+  </ul>
+</nav>
+
+<header id="inicio">
+  <h1>Taverna do Rogério</h1>
+  <p>Gastronomia Mediterrânea & Portuguesa em Carcavelos</p>
+
+  <a href="#contacto" class="btn">
+    Reservar Mesa
+  </a>
+</header>
+
+<section id="menu">
+
+  <h2>🍽 O Que Servimos</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🐟 Peixe Fresco</h3>
+      <p>Peixe do dia grelhado com ingredientes frescos e locais.</p>
     </div>
-  </section>
-  <section id="info">
-    <h2>📍 Horários & Localização</h2>
+
+    <div class="card">
+      <h3>🥩 Carnes & Petiscos</h3>
+      <p>Secretos, tábuas regionais e petiscos tradicionais.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌿 Sem Glúten</h3>
+      <p>Opções adaptadas para intolerâncias alimentares.</p>
+    </div>
+
+    <div class="card">
+      <h3>🍷 Vinhos & Cocktails</h3>
+      <p>Seleção de vinhos portugueses e cocktails artesanais.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="galeria">
+
+  <h2>📸 Galeria</h2>
+
+  <div class="galeria">
+
+    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200" alt="">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200" alt="">
+
+  </div>
+
+</section>
+
+<section id="info">
+
+  <h2>📍 Horários & Localização</h2>
+
+  <div class="info">
+
     <div class="info-box">
-      <div>
-        <h3>⏰ Horário de Funcionamento</h3>
-        <p><strong>Almoço:</strong> 12h00 – 15h00</p>
-        <p><strong>Jantar:</strong> 19h00 – 23h00</p>
-        <p><strong>Encerrado:</strong> Terça-feira</p>
-        <p style="margin-top:10px;">📶 Wi-Fi gratuito |  Música ao vivo (sexta e sábado)</p>
+
+      <h3>⏰ Horário</h3>
+
+      <p><strong>Almoço:</strong> 12h00 – 15h00</p>
+      <p><strong>Jantar:</strong> 19h00 – 23h00</p>
+      <p><strong>Encerrado:</strong> Terça-feira</p>
+
+      <div class="status" id="estado">
+        Verificando horário...
       </div>
-      <div>
-        <h3>🗺️ Como Chegar</h3>
-        <p>Restaurante Rebelva, Carcavelos</p>
-        <da, Estr. Rebelva 633A, 2785-523 Carcavelos>
-        <iframe class="mapa-container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.8!2d-9.33!3d38.68!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ec6!2sCarcavelos!5e0!3m2!1spt-PT!2spt!4v1" allowfullscreen loading="lazy"></iframe>
-      </div>
+
     </div>
-  </section>
-  <section id="contato" style="text-align: center;">
-    <h2>📞 Faça a Sua Reserva</h2>
-    <p>Garanta a sua mesa ou peça takeaway. Respondemos rápido!</p>
-    <218033789>
-    <a href="https://wa.me/351218033789?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20na%20Taverna%20do%20Rogério." class="btn-whatsapp" target="_blank">💬 Reservar pelo WhatsApp</a>
-    <p style="margin-top: 15px; font-size: 0.9em; color:  #666;">Ou ligue diretamente: <strong>+351 21 XXX XXXX</strong></p>
-  </section>
-  <footer>
-    <p>&copy; 2026 Taverna do Rogério. Todos os direitos reservados.</p>
-  </footer>
+
+    <div class="info-box">
+
+      <h3>🗺️ Morada</h3>
+
+      <p>
+        Estrada da Rebelva 633A<br>
+        2785-523 Carcavelos
+      </p>
+
+      <iframe
+        src="https://www.google.com/maps?q=Estrada%20da%20Rebelva%20633A%20Carcavelos&output=embed"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contacto" style="text-align:center;">
+
+  <h2>📞 Reservas</h2>
+
+  <p>
+    Faça já a sua reserva ou encomenda takeaway.
+  </p>
+
+  <a
+    href="https://wa.me/351218033789?text=Olá! Gostaria de fazer uma reserva na Taverna do Rogério."
+    class="whatsapp"
+    target="_blank">
+
+    💬 Reservar no WhatsApp
+
+  </a>
+
+  <p style="margin-top:20px;">
+    Ou ligue diretamente:
+    <strong>+351 218 033 789</strong>
+  </p>
+
+</section>
+
+<footer>
+  <p>
+    © 2026 Taverna do Rogério • Todos os direitos reservados
+  </p>
+</footer>
+
+<script>
+
+/* RESTAURANTE ABERTO */
+
+function verificarHorario(){
+
+  const agora = new Date();
+
+  const dia = agora.getDay();
+  const hora = agora.getHours();
+
+  const estado = document.getElementById("estado");
+
+  if(dia === 2){
+
+    estado.innerHTML = "🔴 Encerrado hoje";
+    estado.style.color = "red";
+    return;
+
+  }
+
+  if((hora >= 12 && hora < 15) || (hora >= 19 && hora < 23)){
+
+    estado.innerHTML = "🟢 Aberto agora";
+    estado.style.color = "green";
+
+  }else{
+
+    estado.innerHTML = "🟠 Fechado neste momento";
+    estado.style.color = "orange";
+
+  }
+
+}
+
+verificarHorario();
+
+</script>
+
 </body>
 </html>
