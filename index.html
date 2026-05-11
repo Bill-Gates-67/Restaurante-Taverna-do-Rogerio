@@ -1,433 +1,587 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Taverna do Rogério | Restaurante em Carcavelos</title>
+  <title>Taverna do Rogério | Restaurante em Carcavelos</title>
 
-<meta name="description" content="Taverna do Rogério em Carcavelos. Gastronomia portuguesa e mediterrânea, peixe fresco, petiscos, música ao vivo e reservas online.">
+  <meta name="description"
+    content="Taverna do Rogério em Carcavelos. Gastronomia portuguesa e mediterrânea, peixe fresco, carnes, petiscos, música ao vivo e reservas online.">
 
-<style>
+  <style>
+    :root {
+      --primaria: #2c3e50;
+      --destaque: #d35400;
+      --fundo: #f4f4f4;
+      --branco: #fff;
+      --texto: #333;
+      --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-:root{
-  --primaria:#2c3e50;
-  --destaque:#d35400;
-  --fundo:#f4f4f4;
-  --branco:#fff;
-  --texto:#333;
-  --sombra:0 4px 12px rgba(0,0,0,0.1);
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html{
-  scroll-behavior:smooth;
-}
+    body {
+      font-family: Segoe UI, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
 
-body{
-  font-family:Segoe UI,sans-serif;
-  background:var(--fundo);
-  color:var(--texto);
-  line-height:1.6;
-}
+    /* NAV */
 
-/* NAV */
+    nav {
+      background: var(--primaria);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 15px;
+    }
 
-nav{
-  background:var(--primaria);
-  position:sticky;
-  top:0;
-  z-index:1000;
-  padding:15px;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-nav ul{
-  list-style:none;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  padding:8px 14px;
-  border-radius:6px;
-  transition:0.3s;
-}
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-nav a:hover{
-  background:rgba(255,255,255,0.2);
-}
+    /* HEADER */
 
-/* HEADER */
+    header {
+      height: 90vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("IMAGENS/restaurante.jpg");
 
-header{
-  height:90vh;
-  background:
-  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-  url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/61/8f/fa/photo0jpg.jpg?w=1100&h=600&s=1");
+      background-size: cover;
+      background-position: center;
 
-  background-size:cover;
-  background-position:center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
 
-  text-align:center;
-  color:white;
-  padding:20px;
-}
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+    }
 
-header h1{
-  font-size:4rem;
-  margin-bottom:15px;
-}
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
 
-header p{
-  font-size:1.3rem;
-  margin-bottom:20px;
-}
+    .btn {
+      background: var(--destaque);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-.btn{
-  display:inline-block;
-  background:var(--destaque);
-  color:white;
-  text-decoration:none;
-  padding:14px 28px;
-  border-radius:50px;
-  transition:0.3s;
-  font-weight:bold;
-}
+    .btn:hover {
+      transform: scale(1.05);
+    }
 
-.btn:hover{
-  transform:scale(1.05);
-}
+    /* SECTIONS */
 
-/* SECTIONS */
+    section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
 
-section{
-  max-width:1100px;
-  margin:60px auto;
-  padding:0 20px;
-}
+    h2 {
+      color: var(--primaria);
+      margin-bottom: 25px;
+      border-bottom: 3px solid var(--destaque);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
 
-h2{
-  color:var(--primaria);
-  margin-bottom:25px;
-  border-bottom:3px solid var(--destaque);
-  display:inline-block;
-  padding-bottom:6px;
-}
+    /* GRID */
 
-/* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
+    /* CARD */
 
-.card{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:var(--sombra);
-  transition:0.3s;
-}
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      transition: 0.3s;
+      cursor: pointer;
+    }
 
-.card:hover{
-  transform:translateY(-5px);
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-.card h3{
-  color:var(--destaque);
-  margin-bottom:10px;
-}
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
 
-/* GALERIA */
+    .card-content {
+      padding: 20px;
+    }
 
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-}
+    .card h3,
+    .card h4 {
+      color: var(--destaque);
+      margin-bottom: 10px;
+    }
 
-.galeria img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:10px;
-  transition:0.3s;
-}
+    .preco {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 10px;
+      color: var(--primaria);
+    }
 
-.galeria img:hover{
-  transform:scale(1.03);
-}
+    /* INFO */
 
-/* INFO */
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
 
-.info{
-  display:flex;
-  flex-wrap:wrap;
-  gap:25px;
-}
+    .info-box {
+      flex: 1;
+      min-width: 280px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--sombra);
+    }
 
-.info-box{
-  flex:1;
-  min-width:280px;
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:var(--sombra);
-}
+    /* STATUS */
 
-/* STATUS */
+    .status {
+      margin-top: 10px;
+      font-weight: bold;
+    }
 
-.status{
-  margin-top:10px;
-  font-weight:bold;
-  color:green;
-}
+    /* MAPA */
 
-/* MAPA */
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
 
-iframe{
-  width:100%;
-  height:300px;
-  border:none;
-  border-radius:12px;
-  margin-top:15px;
-}
+    /* WHATSAPP */
 
-/* WHATSAPP */
+    .whatsapp {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-.whatsapp{
-  display:inline-block;
-  background:#25D366;
-  color:white;
-  padding:14px 25px;
-  border-radius:50px;
-  text-decoration:none;
-  margin-top:20px;
-  font-weight:bold;
-  transition:0.3s;
-}
+    .whatsapp:hover {
+      transform: scale(1.05);
+    }
 
-.whatsapp:hover{
-  transform:scale(1.05);
-}
+    /* FOOTER */
 
-/* FOOTER */
+    footer {
+      background: var(--primaria);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
 
-footer{
-  background:var(--primaria);
-  color:white;
-  text-align:center;
-  padding:25px;
-  margin-top:50px;
-}
+    /* RESPONSIVO */
 
-/* RESPONSIVO */
+    @media(max-width:768px) {
 
-@media(max-width:768px){
+      header h1 {
+        font-size: 2.5rem;
+      }
 
-  header h1{
-    font-size:2.5rem;
-  }
+      header p {
+        font-size: 1rem;
+      }
 
-  header p{
-    font-size:1rem;
-  }
-
-}
-
-</style>
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <ul>
-    <li><a href="#inicio">Início</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#galeria">Galeria</a></li>
-    <li><a href="#info">Localização</a></li>
-    <li><a href="#contacto">Reservas</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
 
-<header id="inicio">
-  <h1>Taverna do Rogério</h1>
-  <p>Gastronomia Mediterrânea & Portuguesa em Carcavelos</p>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#info">Localização</a></li>
+      <li><a href="#contacto">Reservas</a></li>
+    </ul>
+  </nav>
 
-  <a href="#contacto" class="btn">
-    Reservar Mesa
-  </a>
-</header>
+  <!-- HEADER -->
 
-<section id="menu">
+  <header id="inicio">
 
-  <h2>🍽 O Que Servimos</h2>
+    <h1>Taverna do Rogério</h1>
 
-  <div class="grid">
+    <p>
+      Gastronomia Portuguesa & Mediterrânea
+    </p>
 
-    <div class="card">
-      <h3>🐟 Peixe Fresco</h3>
-      <p>Peixe do dia grelhado com ingredientes frescos e locais.</p>
-    </div>
+    <a href="#contacto" class="btn">
+      Reservar Mesa
+    </a>
 
-    <div class="card">
-      <h3>🥩 Carnes & Petiscos</h3>
-      <p>Secretos, tábuas regionais e petiscos tradicionais.</p>
-    </div>
+  </header>
 
-    <div class="card">
-      <h3>🌿 Sem Glúten</h3>
-      <p>Opções adaptadas para intolerâncias alimentares.</p>
-    </div>
+  <!-- MENU -->
 
-    <div class="card">
-      <h3>🍷 Vinhos & Cocktails</h3>
-      <p>Seleção de vinhos portugueses e cocktails artesanais.</p>
-    </div>
+  <section id="menu">
 
-  </div>
+    <h2>🍽 O Nosso Menu</h2>
 
-</section>
+    <div class="grid">
 
-<section id="galeria">
+      <div class="card" onclick="mostrarCategoria('carnes')">
+        <img src="IMAGENS/carnes.jpg">
+        <div class="card-content">
+          <h3>🥩 Carnes</h3>
+          <p>Veja todos os pratos de carne</p>
+        </div>
+      </div>
 
-  <h2>📸 Galeria</h2>
+      <div class="card" onclick="mostrarCategoria('peixes')">
+        <img src="IMAGENS/peixes.jpg">
+        <div class="card-content">
+          <h3>🐟 Peixes</h3>
+          <p>Veja todos os pratos de peixe</p>
+        </div>
+      </div>
 
-  <div class="galeria">
+      <div class="card" onclick="mostrarCategoria('petiscos')">
+        <img src="IMAGENS/petiscos.jpg">
+        <div class="card-content">
+          <h3>🧀 Petiscos</h3>
+          <p>Veja os nossos petiscos</p>
+        </div>
+      </div>
 
-    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200" alt="">
-    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200" alt="">
-    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200" alt="">
-    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200" alt="">
-
-  </div>
-
-</section>
-
-<section id="info">
-
-  <h2>📍 Horários & Localização</h2>
-
-  <div class="info">
-
-    <div class="info-box">
-
-      <h3>⏰ Horário</h3>
-
-      <p><strong>Almoço:</strong> 12h00 – 15h00</p>
-      <p><strong>Jantar:</strong> 19h00 – 23h00</p>
-      <p><strong>Encerrado:</strong> Terça-feira</p>
-
-      <div class="status" id="estado">
-        Verificando horário...
+      <div class="card" onclick="mostrarCategoria('bebidas')">
+        <img src="IMAGENS/bebidas.jpg">
+        <div class="card-content">
+          <h3>🍷 Bebidas</h3>
+          <p>Veja as bebidas disponíveis</p>
+        </div>
       </div>
 
     </div>
 
-    <div class="info-box">
+    <!-- CARNES -->
 
-      <h3>🗺️ Morada</h3>
+    <div id="carnes" class="categoria" style="margin-top:40px;">
 
-      <p>
-        Estrada da Rebelva 633A<br>
-        2785-523 Carcavelos
-      </p>
+      <h2>🥩 Carnes</h2>
 
-      <iframe
-        src="https://www.google.com/maps?q=Estrada%20da%20Rebelva%20633A%20Carcavelos&output=embed"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
+      <div class="grid">
+
+        <div class="card">
+          <img src="IMAGENS/secretos.jpg">
+          <div class="card-content">
+            <h4>Secretos de Porco Preto</h4>
+            <p>Servido com batata frita e salada.</p>
+            <div class="preco">15.90€</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="IMAGENS/entrecosto.jpg">
+          <div class="card-content">
+            <h4>Entrecosto BBQ</h4>
+            <p>Carne assada lentamente com molho barbecue.</p>
+            <div class="preco">17.50€</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="IMAGENS/bife.jpg">
+          <div class="card-content">
+            <h4>Bife da Casa</h4>
+            <p>Bife grelhado com molho especial.</p>
+            <div class="preco">18.90€</div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
 
-  </div>
+    <!-- PEIXES -->
 
-</section>
+    <div id="peixes" class="categoria" style="display:none; margin-top:40px;">
 
-<section id="contacto" style="text-align:center;">
+      <h2>🐟 Peixes</h2>
 
-  <h2>📞 Reservas</h2>
+      <div class="grid">
 
-  <p>
-    Faça já a sua reserva ou encomenda takeaway.
-  </p>
+        <div class="card">
+          <img src="IMAGENS/bacalhau.jpg">
+          <div class="card-content">
+            <h4>Bacalhau à Lagareiro</h4>
+            <p>Bacalhau assado com azeite e batata.</p>
+            <div class="preco">19.90€</div>
+          </div>
+        </div>
 
-  <a
-    href="https://wa.me/351218033789?text=Olá! Gostaria de fazer uma reserva na Taverna do Rogério."
-    class="whatsapp"
-    target="_blank">
+        <div class="card">
+          <img src="IMAGENS/polvo.jpg">
+          <div class="card-content">
+            <h4>Polvo à Lagareiro</h4>
+            <p>Polvo grelhado no forno.</p>
+            <div class="preco">22.50€</div>
+          </div>
+        </div>
 
-    💬 Reservar no WhatsApp
+      </div>
 
-  </a>
+    </div>
 
-  <p style="margin-top:20px;">
-    Ou ligue diretamente:
-    <strong>+351 218 033 789</strong>
-  </p>
+    <!-- PETISCOS -->
 
-</section>
+    <div id="petiscos" class="categoria" style="display:none; margin-top:40px;">
 
-<footer>
-  <p>
-    © 2026 Taverna do Rogério • Todos os direitos reservados
-  </p>
-</footer>
+      <h2>🧀 Petiscos</h2>
 
-<script>
+      <div class="grid">
 
-/* RESTAURANTE ABERTO */
+        <div class="card">
+          <img src="IMAGENS/queijos.jpg">
+          <div class="card-content">
+            <h4>Tábua de Queijos</h4>
+            <p>Seleção de queijos regionais.</p>
+            <div class="preco">11.90€</div>
+          </div>
+        </div>
 
-function verificarHorario(){
+        <div class="card">
+          <img src="IMAGENS/chourico.jpg">
+          <div class="card-content">
+            <h4>Chouriço Assado</h4>
+            <p>Chouriço tradicional português.</p>
+            <div class="preco">8.50€</div>
+          </div>
+        </div>
 
-  const agora = new Date();
+      </div>
 
-  const dia = agora.getDay();
-  const hora = agora.getHours();
+    </div>
 
-  const estado = document.getElementById("estado");
+    <!-- BEBIDAS -->
 
-  if(dia === 2){
+    <div id="bebidas" class="categoria" style="display:none; margin-top:40px;">
 
-    estado.innerHTML = "🔴 Encerrado hoje";
-    estado.style.color = "red";
-    return;
+      <h2>🍷 Bebidas</h2>
 
-  }
+      <div class="grid">
 
-  if((hora >= 12 && hora < 15) || (hora >= 19 && hora < 23)){
+        <div class="card">
+          <img src="IMAGENS/vinho.jpg">
+          <div class="card-content">
+            <h4>Vinho da Casa</h4>
+            <p>Vinho tinto ou branco.</p>
+            <div class="preco">12€</div>
+          </div>
+        </div>
 
-    estado.innerHTML = "🟢 Aberto agora";
-    estado.style.color = "green";
+        <div class="card">
+          <img src="IMAGENS/gin.jpg">
+          <div class="card-content">
+            <h4>Gin Tónico</h4>
+            <p>Preparado com gin premium.</p>
+            <div class="preco">7€</div>
+          </div>
+        </div>
 
-  }else{
+      </div>
 
-    estado.innerHTML = "🟠 Fechado neste momento";
-    estado.style.color = "orange";
+    </div>
 
-  }
+  </section>
 
-}
+  <!-- INFO -->
 
-verificarHorario();
+  <section id="info">
 
-</script>
+    <h2>📍 Horários & Localização</h2>
+
+    <div class="info">
+
+      <div class="info-box">
+
+        <h3>⏰ Horário</h3>
+
+        <p><strong>Almoço:</strong> 12h00 – 15h00</p>
+        <p><strong>Jantar:</strong> 19h00 – 23h00</p>
+        <p><strong>Encerrado:</strong> Terça-feira</p>
+
+        <div class="status" id="estado">
+          Verificando horário...
+        </div>
+
+      </div>
+
+      <div class="info-box">
+
+        <h3>🗺️ Morada</h3>
+
+        <p>
+          Estrada da Rebelva 633A<br>
+          2785-523 Carcavelos
+        </p>
+
+        <iframe
+          src="https://www.google.com/maps?q=Estrada%20da%20Rebelva%20633A%20Carcavelos&output=embed"
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACTO -->
+
+  <section id="contacto" style="text-align:center;">
+
+    <h2>📞 Reservas</h2>
+
+    <p>
+      Faça já a sua reserva ou encomenda takeaway.
+    </p>
+
+    <a href="https://wa.me/351218033789?text=Olá! Gostaria de fazer uma reserva na Taverna do Rogério."
+      class="whatsapp"
+      target="_blank">
+
+      💬 Reservar no WhatsApp
+
+    </a>
+
+    <p style="margin-top:20px;">
+      Ou ligue diretamente:
+      <strong>+351 218 033 789</strong>
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Taverna do Rogério • Todos os direitos reservados
+    </p>
+
+  </footer>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    function mostrarCategoria(categoria) {
+
+      let categorias = document.querySelectorAll('.categoria');
+
+      categorias.forEach(item => {
+        item.style.display = 'none';
+      });
+
+      document.getElementById(categoria).style.display = 'block';
+
+    }
+
+    function verificarHorario() {
+
+      const agora = new Date();
+
+      const dia = agora.getDay();
+      const hora = agora.getHours();
+
+      const estado = document.getElementById("estado");
+
+      if (dia === 2) {
+
+        estado.innerHTML = "🔴 Encerrado hoje";
+        estado.style.color = "red";
+        return;
+
+      }
+
+      if ((hora >= 12 && hora < 15) || (hora >= 19 && hora < 23)) {
+
+        estado.innerHTML = "🟢 Aberto agora";
+        estado.style.color = "green";
+
+      } else {
+
+        estado.innerHTML = "🟠 Fechado neste momento";
+        estado.style.color = "orange";
+
+      }
+
+    }
+
+    verificarHorario();
+
+  </script>
 
 </body>
+
 </html>
