@@ -6,16 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Taverna do Rogério | Restaurante em Carcavelos</title>
-  <meta name="description"
-    content="Taverna do Rogério em Carcavelos. Gastronomia portuguesa e mediterrânea, peixe fresco, carnes, petiscos, música ao vivo e reservas online.">
 
   <style>
     :root {
       --primaria: #2c3e50;
       --destaque: #d35400;
       --fundo: #f4f4f4;
-      --branco: #fff;
       --texto: #333;
+      --branco: #fff;
       --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
@@ -47,10 +45,10 @@
     }
 
     nav ul {
-      list-style: none;
       display: flex;
       justify-content: center;
       gap: 20px;
+      list-style: none;
       flex-wrap: wrap;
     }
 
@@ -72,7 +70,7 @@
       height: 90vh;
       background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("IMAGENS/restaurante.jpg");
+        url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/61/8f/fa/photo0jpg.jpg?w=1100&h=600&s=1");
 
       background-size: cover;
       background-position: center;
@@ -93,16 +91,16 @@
     }
 
     header p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 25px;
     }
 
     .btn {
       background: var(--destaque);
       color: white;
+      text-decoration: none;
       padding: 14px 28px;
       border-radius: 50px;
-      text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
     }
@@ -169,8 +167,8 @@
     .preco {
       font-size: 1.2rem;
       font-weight: bold;
-      margin-top: 10px;
       color: var(--primaria);
+      margin-top: 10px;
     }
 
     /* INFO */
@@ -190,15 +188,6 @@
       box-shadow: var(--sombra);
     }
 
-    /* STATUS */
-
-    .status {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    /* MAPA */
-
     iframe {
       width: 100%;
       height: 300px;
@@ -213,11 +202,11 @@
       display: inline-block;
       background: #25D366;
       color: white;
+      text-decoration: none;
       padding: 14px 28px;
       border-radius: 50px;
-      text-decoration: none;
-      margin-top: 20px;
       font-weight: bold;
+      margin-top: 20px;
       transition: 0.3s;
     }
 
@@ -235,16 +224,10 @@
       margin-top: 50px;
     }
 
-    /* RESPONSIVO */
-
     @media(max-width:768px) {
 
       header h1 {
         font-size: 2.5rem;
-      }
-
-      header p {
-        font-size: 1rem;
       }
 
     }
@@ -289,35 +272,47 @@
     <div class="grid">
 
       <div class="card" onclick="mostrarCategoria('carnes')">
-        <img src="IMAGENS/carnes.jpg">
+
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200">
+
         <div class="card-content">
           <h3>🥩 Carnes</h3>
-          <p>Veja todos os pratos de carne</p>
+          <p>Clique para ver os pratos</p>
         </div>
+
       </div>
 
       <div class="card" onclick="mostrarCategoria('peixes')">
-        <img src="IMAGENS/peixes.jpg">
+
+        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1200">
+
         <div class="card-content">
           <h3>🐟 Peixes</h3>
-          <p>Veja todos os pratos de peixe</p>
+          <p>Clique para ver os pratos</p>
         </div>
+
       </div>
 
       <div class="card" onclick="mostrarCategoria('petiscos')">
-        <img src="IMAGENS/petiscos.jpg">
+
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200">
+
         <div class="card-content">
           <h3>🧀 Petiscos</h3>
-          <p>Veja os nossos petiscos</p>
+          <p>Clique para ver os pratos</p>
         </div>
+
       </div>
 
       <div class="card" onclick="mostrarCategoria('bebidas')">
-        <img src="IMAGENS/bebidas.jpg">
+
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200">
+
         <div class="card-content">
           <h3>🍷 Bebidas</h3>
-          <p>Veja as bebidas disponíveis</p>
+          <p>Clique para ver bebidas</p>
         </div>
+
       </div>
 
     </div>
@@ -331,25 +326,28 @@
       <div class="grid">
 
         <div class="card">
-          <img src="IMAGENS/secretos.jpg">
+          <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1200">
+
           <div class="card-content">
             <h4>Secretos de Porco Preto</h4>
-            <p>Servido com batata frita e salada.</p>
+            <p>Com batata frita e salada.</p>
             <div class="preco">15.90€</div>
           </div>
         </div>
 
         <div class="card">
-          <img src="IMAGENS/entrecosto.jpg">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200">
+
           <div class="card-content">
             <h4>Entrecosto BBQ</h4>
-            <p>Carne assada lentamente com molho barbecue.</p>
+            <p>Carne assada lentamente.</p>
             <div class="preco">17.50€</div>
           </div>
         </div>
 
         <div class="card">
-          <img src="IMAGENS/bife.jpg">
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1200">
+
           <div class="card-content">
             <h4>Bife da Casa</h4>
             <p>Bife grelhado com molho especial.</p>
@@ -370,16 +368,18 @@
       <div class="grid">
 
         <div class="card">
-          <img src="IMAGENS/bacalhau.jpg">
+          <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1200">
+
           <div class="card-content">
             <h4>Bacalhau à Lagareiro</h4>
-            <p>Bacalhau assado com azeite e batata.</p>
+            <p>Bacalhau assado com azeite.</p>
             <div class="preco">19.90€</div>
           </div>
         </div>
 
         <div class="card">
-          <img src="IMAGENS/polvo.jpg">
+          <img src="https://images.unsplash.com/photo-1559847844-d721426d6edc?q=80&w=1200">
+
           <div class="card-content">
             <h4>Polvo à Lagareiro</h4>
             <p>Polvo grelhado no forno.</p>
@@ -400,19 +400,21 @@
       <div class="grid">
 
         <div class="card">
-          <img src="IMAGENS/queijos.jpg">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200">
+
           <div class="card-content">
             <h4>Tábua de Queijos</h4>
-            <p>Seleção de queijos regionais.</p>
+            <p>Seleção regional.</p>
             <div class="preco">11.90€</div>
           </div>
         </div>
 
         <div class="card">
-          <img src="IMAGENS/chourico.jpg">
+          <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200">
+
           <div class="card-content">
             <h4>Chouriço Assado</h4>
-            <p>Chouriço tradicional português.</p>
+            <p>Tradicional português.</p>
             <div class="preco">8.50€</div>
           </div>
         </div>
@@ -430,16 +432,18 @@
       <div class="grid">
 
         <div class="card">
-          <img src="IMAGENS/vinho.jpg">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1200">
+
           <div class="card-content">
             <h4>Vinho da Casa</h4>
-            <p>Vinho tinto ou branco.</p>
+            <p>Tinto ou branco.</p>
             <div class="preco">12€</div>
           </div>
         </div>
 
         <div class="card">
-          <img src="IMAGENS/gin.jpg">
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200">
+
           <div class="card-content">
             <h4>Gin Tónico</h4>
             <p>Preparado com gin premium.</p>
@@ -468,10 +472,6 @@
         <p><strong>Almoço:</strong> 12h00 – 15h00</p>
         <p><strong>Jantar:</strong> 19h00 – 23h00</p>
         <p><strong>Encerrado:</strong> Terça-feira</p>
-
-        <div class="status" id="estado">
-          Verificando horário...
-        </div>
 
       </div>
 
@@ -505,7 +505,8 @@
       Faça já a sua reserva ou encomenda takeaway.
     </p>
 
-    <a href="https://wa.me/351218033789?text=Olá! Gostaria de fazer uma reserva na Taverna do Rogério."
+    <a
+      href="https://wa.me/351218033789?text=Olá! Gostaria de fazer uma reserva na Taverna do Rogério."
       class="whatsapp"
       target="_blank">
 
@@ -514,7 +515,7 @@
     </a>
 
     <p style="margin-top:20px;">
-      Ou ligue diretamente:
+      Ou ligue:
       <strong>+351 218 033 789</strong>
     </p>
 
@@ -545,39 +546,6 @@
       document.getElementById(categoria).style.display = 'block';
 
     }
-
-    function verificarHorario() {
-
-      const agora = new Date();
-
-      const dia = agora.getDay();
-      const hora = agora.getHours();
-
-      const estado = document.getElementById("estado");
-
-      if (dia === 2) {
-
-        estado.innerHTML = "🔴 Encerrado hoje";
-        estado.style.color = "red";
-        return;
-
-      }
-
-      if ((hora >= 12 && hora < 15) || (hora >= 19 && hora < 23)) {
-
-        estado.innerHTML = "🟢 Aberto agora";
-        estado.style.color = "green";
-
-      } else {
-
-        estado.innerHTML = "🟠 Fechado neste momento";
-        estado.style.color = "orange";
-
-      }
-
-    }
-
-    verificarHorario();
 
   </script>
 
