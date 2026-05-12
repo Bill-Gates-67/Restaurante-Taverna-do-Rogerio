@@ -539,9 +539,9 @@
 
   <!-- SCRIPT -->
 
-  <script>
+    <script>
 
-    function mostrarCategoria(categoria) {
+     function mostrarCategoria(categoria) {
 
       let categorias = document.querySelectorAll('.categoria');
 
@@ -553,8 +553,42 @@
 
     }
 
+    function verificarHorario() {
+
+      const agora = new Date();
+
+      const dia = agora.getDay();
+      const hora = agora.getHours();
+
+      const estado = document.getElementById("estado");
+
+      if (dia === 2) {
+
+        estado.innerHTML = "🔴 Encerrado hoje";
+        estado.style.color = "red";
+        return;
+
+      }
+
+      if ((hora >= 12 && hora < 15) || (hora >= 19 && hora < 23)) {
+
+        estado.innerHTML = "🟢 Aberto agora";
+        estado.style.color = "green";
+
+      } else {
+
+        estado.innerHTML = "🟠 Fechado neste momento";
+        estado.style.color = "orange";
+
+      }
+
+    }
+
+    verificarHorario();
+
   </script>
 
 </body>
 
+</html>
 </html>
