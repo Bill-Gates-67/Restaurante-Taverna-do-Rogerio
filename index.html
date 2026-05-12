@@ -472,25 +472,14 @@
         <p><strong>Almoço:</strong> 12h00 – 15h00</p>
         <p><strong>Jantar:</strong> 19h00 – 23h00</p>
         <p><strong>Encerrado:</strong> Terça-feira</p>
-      if (dia === 2) {
-
-        estado.innerHTML = "🔴 Encerrado hoje";
-        estado.style.color = "red";
-        return;
-
-      }
-
-      if ((hora >= 12 && hora < 15) || (hora >= 19 && hora < 23)) {
-
-        estado.innerHTML = "🟢 Aberto agora";
-        estado.style.color = "green";
-
-      } else {
-
-        estado.innerHTML = "🟠 Fechado neste momento";
-        estado.style.color = "orange";
+ 
+        <div class="status" id="estado">
+          Verificando horário...
+        </div>
 
       </div>
+
+      <div class="info-box">
 
       <div class="info-box">
 
